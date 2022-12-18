@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from datetime import date
 
 import seaborn as sns
 import matplotlib.pyplot as plt

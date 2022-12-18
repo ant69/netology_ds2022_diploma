@@ -144,17 +144,13 @@ def build_all_protocols_data(df_templates):
     return df_full    
 
 
-def get_core_dataframes(df_version='stand'):
+def get_core_dataframes():
     """
     Функция возвращает датафрейм со словарем шаблонов и датафрейм со всеми протоколами
     """
     
     df_templates = pd.read_csv('data/intermid/protocols_templates.csv', sep=';') 
-    if df_version == 'stand':
-        df_main = pd.read_csv('data/intermid/full_df_stand.csv', sep=';') 
-    elif df_version == 'gap':
-        df_main = pd.read_csv('data/intermid/full_df_gaps.csv', sep=';') 
-        
+    df_main = pd.read_csv('data/intermid/full_df_stand.csv', sep=';') 
     df_main.drop(['Unnamed: 0'], axis=1, inplace=True)
     
     return df_templates, df_main
