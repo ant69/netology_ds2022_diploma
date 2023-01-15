@@ -23,7 +23,8 @@ def load_protocols_data(df_templates):
     Одновременно инициализируются датасеты с протоколами по каждому из шаблонов
     В дальнейшем сохраненные версии датасетов могут скачиваться быстрее из локального хранилища
     """
-    prot_mask_csv = 'http://kurators.direktoria.org/action.htm?action=export_data&do=get_template_protocols&filters=a:1:%7Bs:10:%22protocolId%22;s:%LEN_ID%:%22%ID%%22;%7D&format=csv&special=anonim'
+    # Текущий урл в ноутбуке нерабочий из соображений защиты персональных данных
+    prot_mask_csv = 'http://kurators.direktoria.org/action.htm?action=export_data&do=get_template_protocols&filters=a:1:%7Bs:10:%22protocolId%22;s:%LEN_ID%:%22%ID%%22;%7D&format=csv&special=******'
 
     protocols_dfs = []
 
